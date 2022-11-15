@@ -156,3 +156,16 @@ func_each_label(label_6, "label_6")
 func_each_label(label_7, "label_7")
 func_each_label(label_8, "label_8")
 func_each_label(label_9, "label_9")
+
+
+# Problem 4
+library(raster)
+for (n in x){
+  k <- paste0("hand_writing_",n,".png")
+  im <- load.image(k)
+  # im <- load.image(file)
+  im.r <- as.raster(im,interpolate=F)
+  str(im.r)
+  plot(im.r)
+}
+dev.off()
